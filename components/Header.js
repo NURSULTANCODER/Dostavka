@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 50,
     padding: 10,
-    backgroundColor: '#000',
+    backgroundColor: '#eaeb27',
     color: 'white',
   },
   logo: {

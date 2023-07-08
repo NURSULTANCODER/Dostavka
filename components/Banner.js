@@ -13,10 +13,20 @@ const Banner = () => {
 
   return (
     <View style={styles.bannerContainer}>
-      <Text style={activeSide === 0 ? styles.activeSide : styles.inactiveSide}>Side 1</Text>
-      <Text style={activeSide === 1 ? styles.activeSide : styles.inactiveSide}>Side 2</Text>
-      <Text style={activeSide === 2 ? styles.activeSide : styles.inactiveSide}>Side 3</Text>
-      <Text style={activeSide === 3 ? styles.activeSide : styles.inactiveSide}>Side 4</Text>
+      <View style={activeSide === 0 ? styles.activeSide : styles.inactiveSide}>
+        <View style={styles.banner}>
+
+        </View>
+      </View>
+      <View style={activeSide === 1 ? styles.activeSide : styles.inactiveSide}>
+
+      </View>
+      <View style={activeSide === 2 ? styles.activeSide : styles.inactiveSide}>
+
+      </View>
+      <View style={activeSide === 3 ? styles.activeSide : styles.inactiveSide}>
+
+      </View>
     </View>
   );
 };
@@ -37,6 +47,10 @@ const styles = StyleSheet.create({
     color: '#333',
     fontWeight: 'normal',
   },
+  banner: {
+    height: 180,
+    
+  }
 });
 
 export default Banner;

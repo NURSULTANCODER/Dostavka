@@ -1,15 +1,15 @@
 import { View, Image, Text, StyleSheet } from "react-native"
 
-export const DishCard = () => {
+export const DishCard = ({id, name, description, img, price}) => {
   return (
   <View style={styles.card}>
     <View style={styles.cardInfo}>
-      <Text style={styles.name}>Ногури рамен</Text>
-      <Text style={styles.outline}>Острый рамен с морепродуктами.</Text>
-      <Text style={styles.price}>330 сом</Text>
-      <Text style={styles.id}>id: 00123</Text>
+      <Text style={styles.name}>{name}</Text>
+      <Text style={styles.outline}>{description}</Text>
+      <Text style={styles.price}>{price} сом</Text>
+      <Text style={styles.id}>id: 0012{id}</Text>
     </View>
-    <View style={styles.cards}><Image source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeAZZFLQVIEmMyx8F0u72l_BRdXHnuThiWuQ&usqp=CAU'}} /></View>
+    <View style={styles.cards}><Image style={styles.tinyLogo} source={{uri: img }} /></View>
   </View>
   )
 }
@@ -17,6 +17,9 @@ export const DishCard = () => {
 const styles = StyleSheet.create({
   card: {
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     paddingBottom: 23,
     marginLeft: 15,
     marginRight: 15,
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   cardInfo: {
-
+    marginRight: 20,
   },
   name: {
     fontSize: 16,
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
     color: '#828282',
     fontWeight: 400,
     marginBottom: 8,
+    width: 260
   },
   price: {
     fontSize: 14,
@@ -49,6 +53,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#2F80ED',
     fontWeight: 400,
-  }
+  },
+  tinyLogo: {
+    width: 80,
+    height: 80,
+    borderRadius: 15,
+  },
 
 })
